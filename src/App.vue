@@ -10,6 +10,7 @@ import Hello from './components/Hello'
 import Home from './components/Home'
 import Navbar from './components/reusable/Navbar'
 
+
 export default {
   name: 'app',
   components: {

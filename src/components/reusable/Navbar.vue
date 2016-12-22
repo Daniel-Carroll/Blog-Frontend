@@ -1,6 +1,6 @@
 <template>
     <!--Navbar-->
-    <nav class="navbar navbar-dark bg-primary">
+    <nav class="navbar navbar-fixed-top navbar-dark bg-primary">
 
         <!-- Collapse button-->
         <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx2">

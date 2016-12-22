@@ -1,5 +1,5 @@
 <template>
-    <div class='container'>
+    <div class='container main-content'>
         <div class='row'>
             <div class='col-md-3'>
                 <img src='../assets/dirtyboi.jpg' class="img-fluid rounded-circle">
@@ -8,17 +8,23 @@
             </div>
             
             <div class='col-md-9'>
-                <div class='card'>
-                    Example card
-                </div>
+                <preview></preview>
+                <preview></preview>
+                <preview></preview>
             </div>
         </div>    
     </div>
 </template>
 
 <script>
+
+import Preview from '../components/reusable/Preview'
+
 export default {
   name: 'home',
+  components: {
+      Preview
+  },
     data () {
         return{
           title: 'Clean Dan'
@@ -26,4 +32,11 @@ export default {
     }
 }
 </script>
+
+<style>
+.main-content{
+    margin-top:65px;
+}
+
+</style>
 
