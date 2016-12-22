@@ -1,0 +1,10 @@
+{
+ "name": "garbagepress",
+ "version": "1.0.0",
+ "description": "worst blog of all time",
+ "author": "daniel carroll",
+ "private": true,
+ "scripts": {
+   "postinstall": "npm install express"
+ }
+}
