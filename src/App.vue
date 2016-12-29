@@ -1,0 +1,63 @@
+<template>
+  <div>
+       <!--Navbar-->
+    <nav class="navbar navbar-fixed-top navbar-dark bg-primary">
+
+        <!-- Collapse button-->
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx2">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <div class="container">
+
+            <!--Collapse content-->
+            <div class="collapse navbar-toggleable-xs" id="collapseEx2">
+                <!--Navbar Brand-->
+                
+                <!--Links-->
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active">
+                        <router-link to='/' class="nav-link">Home</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to='/stuff' class="nav-link">Stuff</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to='/music' class="nav-link">Music</router-link>
+                    </li>
+                    <li class="nav-item btn-group">
+                        <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <a class="dropdown-item">Action</a>
+                            <a class="dropdown-item">Another action</a>
+                            <a class="dropdown-item">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <!--Search form-->
+                <form class="form-inline">
+                    <input class="form-control" type="text" placeholder="Search">
+                </form>
+            </div>
+            <!--/.Collapse content-->
+
+        </div>
+
+    </nav>
+    <router-view></router-view>
+  </div>
+</template>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top:65px;
+}
+nav{
+    margin-bottom:20px;
+}
+</style>
