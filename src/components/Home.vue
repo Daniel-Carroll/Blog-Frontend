@@ -2,15 +2,15 @@
     <div class='container main-content'>
         <div class='row'>
             <div class='col-md-3'>
-                <img src='../assets/dirtyboi.jpg' class="img-fluid rounded-circle">
+                <!-- <img src='../assets/dirtyboi.jpg' class="img-fluid rounded-circle"> -->
                 <h3>{{title}}</h3>
                 <p>Insert some dramatic biography stuff here</p>
             </div>
             
             <div class='col-md-9'>
-                <preview></preview>
-                <preview></preview>
-                <preview></preview>
+                <div v-for='post in posts'>
+                    <preview :name='post.name' :description='post.description'></preview>
+                </div>
             </div>
         </div>    
     </div>
@@ -27,9 +27,22 @@ export default {
   },
     data () {
         return{
-          title: 'Clean Dan'
+          title: 'Clean Dan',
+          posts: []
         }
+    },
+    methods: {
+        getBlogPosts: function (){
+            
+            axios.get('/blog_api/api/posts')
+                .then(response => this.posts = response.data);
+            
+        }
+    },
+    created() {
+        this.getBlogPosts()
     }
+ 
 }
 </script>
 

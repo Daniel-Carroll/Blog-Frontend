@@ -1,8 +1,8 @@
 <template>
     <div class="preview card">
         <div class="card-block">
-            <h3>Blog Post Title</h3>
-            <p class="card-text">Sit ipsum ponderum oportere ei. Eam te labitur delenit, accusam imperdiet ut est. Ne solet conceptam sea. Ea velit sanctus molestiae ius. Mei ei populo possim forensibus.</p>
+            <h3>{{name}}</h3>
+            <p class="card-text">{{description}}</p>
             <a href="#" class="btn-flat">READ MORE</a>
         </div>
         <!-- Card footer -->
@@ -14,6 +14,13 @@
         <!-- Card footer -->
     </div>
 </template>
+
+<script>
+    export default {
+        name: 'preview',
+        props: ['name', 'description']
+        }
+</script>
 
 <style scoped>
 .preview{

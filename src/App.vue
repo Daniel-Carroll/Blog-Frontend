@@ -1,52 +1,20 @@
 <template>
-  <div>
-       <!--Navbar-->
-    <nav class="navbar navbar-fixed-top navbar-dark bg-primary">
-
-        <!-- Collapse button-->
-        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx2">
-            <i class="fa fa-bars"></i>
-        </button>
-
-        <div class="container">
-
-            <!--Collapse content-->
-            <div class="collapse navbar-toggleable-xs" id="collapseEx2">
-                <!--Navbar Brand-->
-                
-                <!--Links-->
-                <ul class="nav navbar-nav">
-                    <li class="nav-item active">
-                        <router-link to='/' class="nav-link">Home</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link to='/stuff' class="nav-link">Stuff</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link to='/music' class="nav-link">Music</router-link>
-                    </li>
-                    <li class="nav-item btn-group">
-                        <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <a class="dropdown-item">Action</a>
-                            <a class="dropdown-item">Another action</a>
-                            <a class="dropdown-item">Something else here</a>
-                        </div>
-                    </li>
-                </ul>
-                <!--Search form-->
-                <form class="form-inline">
-                    <input class="form-control" type="text" placeholder="Search">
-                </form>
-            </div>
-            <!--/.Collapse content-->
-
-        </div>
-
-    </nav>
+  <div id='app'>
+    <navbar></navbar>
     <router-view></router-view>
   </div>
 </template>
+
+<script>
+
+import Navbar from './components/reusable/navbar'
+export default {
+  name: 'app',
+  components: {
+    Navbar
+  }
+}
+</script>
 
 <style>
 #app {

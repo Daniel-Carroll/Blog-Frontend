@@ -5,6 +5,7 @@ Vue.use(VueRouter)
 
 import Home from '../components/Home'
 import Music from '../components/Music'
+import Stuff from '../components/Stuff'
 
 
 
@@ -12,7 +13,8 @@ import Music from '../components/Music'
 const router = new VueRouter({
   routes: [
     { path: '/', component: Home },
-    { path: '/music', component: Music }
+    { path: '/music', component: Music },
+    { path: '/stuff', component: Stuff}
   ]
 })
 

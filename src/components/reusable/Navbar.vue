@@ -16,7 +16,7 @@
                 <!--Links-->
                 <ul class="nav navbar-nav">
                     <li class="nav-item active">
-                        <router-link to='/home' class="nav-link">Home</router-link>
+                        <router-link to='/' class="nav-link">Home</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link to='/stuff' class="nav-link">Stuff</router-link>
