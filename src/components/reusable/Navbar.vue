@@ -24,19 +24,17 @@
                     <li class="nav-item">
                         <router-link to='/music' class="nav-link">Music</router-link>
                     </li>
-                    <li class="nav-item btn-group">
-                        <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <a class="dropdown-item">Action</a>
-                            <a class="dropdown-item">Another action</a>
-                            <a class="dropdown-item">Something else here</a>
-                        </div>
+                    <li class="nav-item btn-group float-xs-right">
+                        
                     </li>
                 </ul>
-                <!--Search form-->
-                <form class="form-inline">
-                    <input class="form-control" type="text" placeholder="Search">
-                </form>
+                
+                <a class="nav-link " id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="position:fixed;right:35px;top:13px;"><i class="material-icons">more_vert</i></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                    <router-link to='/create-post' class="dropdown-item">Create Post</router-link>
+                    <a class="dropdown-item">Settings</a>
+                    <a class="dropdown-item">Log Out</a>
+                </div>
             </div>
             <!--/.Collapse content-->
 

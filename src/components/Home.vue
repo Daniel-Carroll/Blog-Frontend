@@ -9,11 +9,13 @@
             
             <div class='col-md-9'>
                 <div v-for='post in posts'>
-                    <preview :name='post.name' :description='post.description'></preview>
+                    <preview :name='post.name' :description='post.description' :body='post.body'
+                    :date='post.date' :category='post.category' :id='post._id'></preview>
                 </div>
             </div>
         </div>    
     </div>
+    
 </template>
 
 <script>

@@ -5,6 +5,7 @@ import router from './router'
 import Home from './components/Home'
 import Music from './components/Music'
 import Stuff from './components/Stuff'
+import Create from './components/Create'
 import App from './App.vue'
 
 const app = new Vue({

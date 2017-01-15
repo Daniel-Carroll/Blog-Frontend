@@ -3,12 +3,12 @@
         <div class="card-block">
             <h3>{{name}}</h3>
             <p class="card-text">{{description}}</p>
-            <a href="#" class="btn-flat">READ MORE</a>
+            <router-link :to="{name: 'garbage-post', params:{postId: id }}" class="btn-flat">READ MORE</router-link>
         </div>
         <!-- Card footer -->
         <div class="card-data">
             <ul>
-                <li><i class="fa fa-clock-o"></i> 05/10/2015</li>
+                <li><i class="fa fa-clock-o"></i>{{date}}</li>
             </ul>
         </div>
         <!-- Card footer -->
@@ -18,7 +18,7 @@
 <script>
     export default {
         name: 'preview',
-        props: ['name', 'description']
+        props: ['name', 'description', 'body', 'date', 'category', 'id']
         }
 </script>
 
