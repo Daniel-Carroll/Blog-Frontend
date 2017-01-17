@@ -28,4 +28,7 @@ export default {
 nav{
     margin-bottom:20px;
 }
+body{
+  background-color:#fafafa
+}
 </style>

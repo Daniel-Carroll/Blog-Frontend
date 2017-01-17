@@ -8,7 +8,7 @@
         <!-- Card footer -->
         <div class="card-data">
             <ul>
-                <li><i class="fa fa-clock-o"></i>{{date}}</li>
+                <li><i class="fa fa-clock-o"></i> {{date | moment}}</li>
             </ul>
         </div>
         <!-- Card footer -->
@@ -16,10 +16,18 @@
 </template>
 
 <script>
+import moment from 'moment'
+
     export default {
         name: 'preview',
         props: ['name', 'description', 'body', 'date', 'category', 'id']
+        ,
+        filters: {
+            moment: function (date) {
+                return moment(date).format('MMMM Do YYYY, h:mm:ss a');
+            }
         }
+}
 </script>
 
 <style scoped>
