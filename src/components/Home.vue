@@ -1,5 +1,7 @@
 <template>
+
     <div class='container main-content'>
+        
         <div class='row'>
             <div class='col-md-3'>
                 <!-- <img src='../assets/dirtyboi.jpg' class="img-fluid rounded-circle"> -->
@@ -35,9 +37,10 @@ export default {
     },
     methods: {
         getBlogPosts: function (){
-            
-            axios.get('/blog_api/api/posts')
+            preloader.on();
+            axios.get('https://trash-server.herokuapp.com/blog_api/api/posts')
                 .then(response => this.posts = response.data);
+            preloader.off();
             
         }
     },

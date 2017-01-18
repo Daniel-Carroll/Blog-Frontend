@@ -18,7 +18,7 @@
   
     <div>
       <quill-editor style="height:500px;margin-bottom:30px;"
-      ref="myTextEditor" v-model="content" :config="editorOption"></quill-editor>
+      ref="myTextEditor" v-model="content" ></quill-editor>
     </div>
     {{content}}
     
@@ -45,20 +45,37 @@ import { quillEditor } from 'vue-quill-editor'
   },
   methods: {
         createBlogPost: function (){
-            
-            axios.post('/blog_api/api/posts', {
-              name: this.title,
-              description: this.description,
-              content: this.content,
-              date: Date.now(),
-              category: this.category,
-              user: 'Cornbread Dan'
+            preloader.on();
+            axios({
+              method: 'post',
+              url: 'blog_api/api/posts',
+              baseURL: 'https://trash-server.herokuapp.com/',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              data: {
+                name: this.title,
+                description: this.description,
+                content: this.content,
+                date: Date.now(),
+                category: this.category,
+                user: 'Cornbread Dan'
+              }
             }).then(function(response){
               console.log(response)
             }).catch(function (error) {
               console.log(error);
             });
             
+            preloader.off();
+            this.initialize();
+            
+        },
+        initialize: function(){
+          this.content = '';
+          this.title = '';
+          this.description = '';
+          this.category = '';
         }
     }
   }

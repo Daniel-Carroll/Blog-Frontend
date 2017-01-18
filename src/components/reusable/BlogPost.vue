@@ -20,10 +20,10 @@
         },
         methods: {
             getBlogPostById: function (){
-                
-                axios.get('/blog_api/api/posts/' + this.$route.params.postId)
+                preloader.on();
+                axios.get('https://trash-server.herokuapp.com/blog_api/api/posts/' + this.$route.params.postId)
                     .then(response => this.post = response.data);
-                
+                preloader.off();
             }
         },
         created() {
@@ -37,5 +37,10 @@
         min-height:500px;
         padding:20px;
     }
-    
+    .header{
+        
+    }
+    .sub-header{
+        
+    }
 </style>
