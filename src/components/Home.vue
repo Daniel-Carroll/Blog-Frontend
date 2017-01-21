@@ -1,12 +1,12 @@
 <template>
 
-    <div class='container main-content'>
+    <div class='container-fluid main-content'>
         
         <div class='row'>
             <div class='col-md-3'>
-                <!-- <img src='../assets/dirtyboi.jpg' class="img-fluid rounded-circle"> -->
-                <h3>{{title}}</h3>
-                <p>Insert some dramatic biography stuff here</p>
+                <img src='../assets/materialtechnology.png' class="avi img-fluid" style="height:75%;width:75%;margin: 0 auto;">
+                <h3 style="margin-top:10px;">{{title}}</h3>
+                <p class="secondary-text">A Blog Devoted to Covering the Top Tech under 20$ but also Emerging Technology</p>
             </div>
             
             <div class='col-md-9'>
@@ -15,6 +15,7 @@
                     :date='post.date' :category='post.category' :id='post._id'></preview>
                 </div>
             </div>
+            
         </div>    
     </div>
     
@@ -31,7 +32,7 @@ export default {
   },
     data () {
         return{
-          title: 'Clean Dan',
+          title: 'Technology in 2017',
           posts: []
         }
     },
@@ -39,8 +40,11 @@ export default {
         getBlogPosts: function (){
             preloader.on();
             axios.get('https://trash-server.herokuapp.com/blog_api/api/posts')
-                .then(response => this.posts = response.data);
-            preloader.off();
+                .then(response => this.posts = response.data)
+                .then(function(){
+                    preloader.off();
+                })
+            
             
         }
     },
@@ -51,8 +55,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
+.avi{
+    margin: 0 auto;
+}
 
 </style>
 

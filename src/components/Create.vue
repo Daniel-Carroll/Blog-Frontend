@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div class="container-fluid">
   <h3>Create Post</h3>
   <form class="md-form">
     <input type="text" id="title" class="form-control" v-model='title'>
